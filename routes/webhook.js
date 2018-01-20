@@ -4,10 +4,11 @@ const router = express.Router();
 
 //for verification
 router.get('/$', function(req, res) {
-    if (req.query['hub.verify_token'] === 'Aha_Moment_Labs') {
-        res.send(req.query['hub.challenge'])
+    if (req.query['hub.verify_token'] === 'PathfinderBot') {
+        res.send(req.query['hub.challenge']);
     }
-    res.end('Error, wrong token')
+	else
+		console.error("error verification token");
 });
 
 module.exports = router;
