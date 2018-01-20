@@ -11,4 +11,9 @@ router.get('/$', function(req, res) {
 		console.error("error verification token");
 });
 
+app.post('/$', function (req, res) {
+	console.log(req.body);
+});
+
+
 module.exports = router;
