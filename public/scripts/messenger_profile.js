@@ -5,7 +5,7 @@ module.exports = function () {
 
     //initialize messenger profile
     request({
-        url: "https://graph.facebook.com/v2.8/me/messenger_profile",
+        url: "https://graph.facebook.com/v2.11/me/messenger_profile",
         qs: { access_token: ACCESS_TOKEN },
         method: 'POST',
         json: {
@@ -34,5 +34,7 @@ module.exports = function () {
             console.error(response.statusCode, response.statusMessage);
             console.error('Response Error:', response.body.error.message);
         }
+        else
+    		   console.log(response.result);
     });
 };

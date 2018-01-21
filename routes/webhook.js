@@ -4,16 +4,18 @@ const router = express.Router();
 
 //for verification
 router.get('/$', function(req, res) {
-    if (req.query['hub.verify_token'] === 'PathfinderBot') {
-        res.send(req.query['hub.challenge']);
+    if (req.query['hub.verify_token'] === 'PathfinderBot') {		    
+        res.status(200).end(req.query['hub.challenge']);
     }
-	else
+	else{
 		console.error("error verification token");
+		res.status(404).end();
+	}
 });
 
-app.post('/$', function (req, res) {
+router.post('/$', function (req, res) {
 	console.log(req.body);
+	res.end();
 });
-
 
 module.exports = router;
