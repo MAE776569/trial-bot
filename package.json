@@ -6,7 +6,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.20.1",
+    "body-parser": "^1.20.3",
     "express": "^4.21.1",
     "request": "^2.83.0",
     "twig": "^1.10.5"
