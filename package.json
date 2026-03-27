@@ -9,7 +9,7 @@
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "request": "^2.83.0",
-    "twig": "^1.10.5"
+    "twig": "^3.0.0"
   },
   "devDependencies": {
     "morgan": "^1.9.1"
